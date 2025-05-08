@@ -40,6 +40,9 @@
         };
 
         apps.default =
-          flake-utils.lib.mkApp { drv = self.packages.${system}.default; };
+          flake-utils.lib.mkApp { 
+            drv = self.packages.${system}.default; 
+            name = "q";
+          };
       });
 }
